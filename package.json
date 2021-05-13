@@ -1,0 +1,22 @@
+{
+  "name": "goodfooding",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "12.1.1",
+    "dotenv": "8.0.0",
+    "eslint": "6.8.0",
+    "express": "4.17.1",
+    "pg": "7.18.2",
+    "sequelize": "6.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "jd (alphaSeahorse)",
+  "license": "ISC"
+}
