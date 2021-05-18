@@ -7,8 +7,8 @@ module.exports = function buildMakeIngredient({ Unit, Recipe }) {
     quantity,
     unit,
     details = [],
-    createdAt = Date.now(),
-    modifiedAt = Date.now()
+    created_at = Date.now(),
+    modified_at = Date.now()
   } = {}) {
     if (!name || name.length < 1) {
       throw new Error('Ingredient name must include at least one character of text.')
@@ -39,8 +39,8 @@ module.exports = function buildMakeIngredient({ Unit, Recipe }) {
       changeUnit: (newUnit) => unit = newUnit,
       getDetails: () => details,
       changeDetails: (newDetails) => details = newDetails,
-      getCreatedAt: () => createdAt,
-      getModifiedAt: () => modifiedAt
+      getCreatedAt: () => created_at,
+      getModifiedAt: () => modified_at
     })
   }
 }

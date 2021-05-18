@@ -4,8 +4,8 @@ module.exports = function buildMakeStep({ Recipe, Step }) {
     recipeId,
     rank = Step.getNextStep(recipeId),
     description,
-    createdAt = Date.now(),
-    modifiedAt = Date.now()
+    created_at = Date.now(),
+    modified_at = Date.now()
   } = {}) {
     if (!description || description.length < 1) {
       throw new Error('Step must include at least one character of text.')
@@ -24,8 +24,8 @@ module.exports = function buildMakeStep({ Recipe, Step }) {
       getRecipeId: () => recipeId,
       getRank: () => rank,
       changeRank: (newRank) => rank = newRank,
-      getCreatedAt: () => createdAt,
-      getModifiedAt: () => modifiedAt
+      getCreatedAt: () => created_at,
+      getModifiedAt: () => modified_at
     })
   }
 }

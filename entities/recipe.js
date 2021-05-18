@@ -12,8 +12,8 @@ module.exports = function buildMakeRecipe({ Url }) {
     // diets = [],
     ingredients = [],
     steps = [],
-    createdAt = Date.now(),
-    modifiedAt = Date.now(),
+    created_at = Date.now(),
+    modified_at = Date.now(),
     curated = false
   } = {}) {
     if (!userId) {
@@ -57,8 +57,8 @@ module.exports = function buildMakeRecipe({ Url }) {
       getIngredients: () => ingredients,
       addIngredients: (newIngredient) => ingredients.push(newIngredient),
       removeIngredients: (ingredientToDelete) => ingredients.filter(ingredient => ingredient !== ingredientToDelete),
-      getCreatedAt: () => createdAt,
-      getModifiedAt: () => modifiedAt,
+      getCreatedAt: () => created_at,
+      getModifiedAt: () => modified_at,
       isCurated: () => curated,
       curate: () => {
         curated = true

@@ -3,8 +3,8 @@ module.exports = function buildMakeTag({ Tag }) {
     id,
     name,
     metaTagId,
-    createdAt = Date.now(),
-    modifiedAt = Date.now()
+    created_at = Date.now(),
+    modified_at = Date.now()
   } = {}) {
     if ((!name || name < 2)) {
       throw new Error('Tag name must include at least two characters of text.')
@@ -17,8 +17,8 @@ module.exports = function buildMakeTag({ Tag }) {
       getId: () => id,
       getName: () => name,
       getMetaTagId: () => Tag.getMetaTagNameFromId(metaTagId),
-      getCreatedAt: () => createdAt,
-      getModifiedAt: () => modifiedAt
+      getCreatedAt: () => created_at,
+      getModifiedAt: () => modified_at
     })
   }
 }
